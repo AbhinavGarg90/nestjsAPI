@@ -1,9 +1,9 @@
-import { IsNotEmpty, IsEmail, IsString } from "class-validator/types/decorator/decorators";
+import { IsNotEmpty, IsEmail, IsString } from "class-validator";
 
 export class AuthDto {
     
-    @IsNotEmpty()
     @IsEmail()
+    @IsNotEmpty()
     email: string;
 
     @IsString()
